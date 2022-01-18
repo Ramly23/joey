@@ -34,18 +34,6 @@
   box-sizing: border-box;
 }
 
-body{
-  margin: 0;
-  padding: 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-}
-
-h3{
-  margin: 0;
-}
-
 a{
   text-decoration: none;
 }
@@ -55,53 +43,19 @@ img{
   height: auto;
 }
 
-/*========== CARD GLASS ==========*/
-
-.card__glass{
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
-  overflow: hidden;
-  padding: 2.5rem;
-  background: linear-gradient(130deg,
-              rgba(251,251,254,.6),
-              rgba(251,251,254,.2));
-  box-shadow: inset 2px 2px 1px rgba(251,251,254,.3)
-              inset -2px -2px 1px rgba(251,251,254,.2);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(10px);
-  width: 50%;
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
 }
 
-.card__img{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid #F4F4FB;
-  margin-bottom: 1rem;
+h3 {
+  margin: 0;
 }
 
-.card__title{
-  font-size: var(--h3-font-size);
-  color: var(--title-color);
-  font-weight: 600;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-}
-
-.col:nth-child(2) {
-  margin-left: 30px;
-}
-
-.col p {
-  margin-top: 8px;
-  font-family: var(--lexend-deca);
-}
-
+/* Circle */
 .card__circle{
   position: absolute;
   width: 250px;
@@ -125,6 +79,47 @@ img{
               rgba(255,255,255,.2));
 }
 
+.card__glass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  padding: 2.5rem;
+  background: linear-gradient(130deg, rgba(251,251,254,.6) , rgba(251,251,254,.2));
+  box-shadow: inset 2px 2px 1px rgba(251,251,254,.3)
+  inset -2px -2px 1px rgba(251,251,254,.2);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+  width: 90%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.card__img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #F4F4FB;
+  margin-bottom: 1rem;
+}
+
+.col:nth-child(2) {
+  margin-left: 25px;
+}
+
+.col p {
+  margin-top: 8px;
+  font-family: var(--lexend-deca);
+}
+
+.icon {
+  color: rgb(146, 147, 245);
+}
+
 .about-me {
   font-family: var(--lexend-deca);
   font-size: 15px;
@@ -136,13 +131,10 @@ img{
 }
 
 .about-me p {
-  line-height: 1.7;
+  line-height: 1.2;
   font-family: var(--chinese-font);
   font-weight: 400;
-}
-
-.icon {
-  color: rgb(146, 147, 245);
+  font-size: 12px;
 }
 
 .card__social{
@@ -174,28 +166,26 @@ img{
   transform: translateX(-1rem);
 }
 
+.wrapper {
+  margin-right: 15px;
+}
+
 .last {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
+  font-size: 14px;
+}
+
+.last span {
+  font-family: var(--chinese-font);
 }
 
 @media screen and (min-width: 568px){
-  .bd-container{
-    margin-left: auto;
-    margin-right: auto;
+
+  .card__glass {
     width: 400px;
-  }
-
-  .card{
-    padding: 0;
-  }
-
-  .card__container{
-    height: 100vh;
-    grid-template-columns: repeat(3, 1fr);
-    align-content: center;
   }
 
   .card__circle1{
@@ -206,17 +196,19 @@ img{
   .card__circle2{
     right: 8%;
     bottom: 15%;
+  }
+
+  .about-me p {
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 768px) {
 
-  .card__container{
-    height: 100vh;
-    grid-template-columns: repeat(3, 1fr);
-    align-content: center;
+  .card__glass {
+    width: 400px;
   }
-
+  
   .card__circle1{
     left: 5%;
     top: 12%;
@@ -225,6 +217,10 @@ img{
   .card__circle2{
     right: 8%;
     bottom: 15%;
+  }
+
+  .about-me p {
+    font-size: 14px;
   }
 }
 
